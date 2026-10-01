@@ -82,6 +82,8 @@ p {
   grid-column: 2/4; /*shortcut method*/
 }
 
+/*Positioning Elements in a Grid*/
+
 .container_2 {
   margin-top: 50px;
   width: 100vw;
@@ -140,6 +142,45 @@ p {
   grid-column-end: 3;
   grid-row-start: span 1;
   grid-row-end: 2;
+}
+
+/*Grid Areas*/
+
+.container_3 {
+  margin-top: 15px;
+  display: grid;
+  gap: 4px;
+  grid-template-columns: repeat(6, 1fr);
+  grid-template-rows: repeat(4, 1fr);
+  grid-template-areas:
+    "top top top top top top"
+    "second second second . . ."
+    ". . . third third third"
+    ". fourth fourth fourth fourth .";
+}
+
+.container_3__child {
+  height: 50px;
+}
+
+.top {
+  grid-area: top;
+  background-color: green;
+}
+
+.second {
+  grid-area: second;
+  background-color: blue;
+}
+
+.third {
+  grid-area: third;
+  background-color: violet;
+}
+
+.fourth {
+  grid-area: fourth;
+  background-color: red;
 }
 
 /*There two grid layouts cover the following topics:
