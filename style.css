@@ -183,6 +183,17 @@ p {
   background-color: red;
 }
 
+.container_4 {
+  display: grid;
+  grid-gap: 10px 10px;
+  grid-template-columns: 1fr 1fr minmax(300px, 1fr);
+}
+
+.container_4__child {
+  width: 200px;
+  height: 200px;
+  background-color: violet;
+}
 /*There two grid layouts cover the following topics:
     1.Creating a grid container with grid items(What is a grid layout)
     2.Grid Container Rows and Columns
